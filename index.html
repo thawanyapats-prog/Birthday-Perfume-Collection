@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ละมุน บาย LKN — คอลเลกชันน้ำหอม 7 วันเกิด (High Concentration 30% System)</title>
+    <title>ละมุน บาย LKN — คอลเลกชันน้ำหอม 7 วันเกิด (Dynamic Concentration & Carrier Base System)</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -162,9 +162,9 @@
 <body class="min-h-full flex flex-col justify-between pb-24 sm:pb-12">
 
     <!-- Mandatory Comment Placeholders -->
-    <!-- Chosen Palette: Modern Warm Luxury Ivory (#FAF8F5 background, #15060A dark plum cards, #E8B06A gold accents) with updated Carrier System (DEB95 68%, DPG 30%, IPM 5%) and Citropol F (2%) premix. -->
-    <!-- Application Structure Plan: Native mobile-first single page app with updated 2-Phase laboratory formulation system (Phase A: Fragrance Oil 30% + Citropol F 2% premix; Phase B: Carrier Base 68% composed of DEB95 68%, DPG 30%, IPM 5%). Interactive tab views, radar chart, lab calculator, and 14 notes compendium. -->
-    <!-- Visualization & Content Choices: 1. Chart.js Radar Chart for olfactive distribution. 2. Real-time batch formula lab calculator with Phase A & Phase B step-by-step breakdown. 3. Dual longevity visualizer (Skin 12-16h / Fabric 24-36h+). 4. Searchable 14 notes directory. NO SVG or Mermaid JS used. -->
+    <!-- Chosen Palette: Modern Warm Luxury Ivory (#FAF8F5 background, #15060A dark plum cards, #E8B06A gold accents) with Dynamic Fragrance Load (20% - 40%+) and Carrier Base System (DEB95 68%, DPG 30%, IPM 5%) + Citropol F (2%) premix. -->
+    <!-- Application Structure Plan: Dynamic single-page web app with interactive Fragrance Concentration Load Controller (20%, 30%, 40%, custom %), dynamic Phase A & Phase B lab formula calculator, radar charts, and 14 scent notes compendium. -->
+    <!-- Visualization & Content Choices: 1. Dynamic Fragrance % Selector (Presets 20%, 30%, 40% & Custom Slider/Input). 2. Dynamic 2-Phase Laboratory Calculator recalculating Phase A (Fragrance + Citropol F 2%) and Phase B (Carrier Base DEB95 68%: DPG 30%: IPM 5%). 3. Chart.js Radar Chart for olfactive comparison. 4. Searchable 14 notes directory. NO SVG or Mermaid JS used. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <div class="w-full">
@@ -185,21 +185,18 @@
                             </span>
                         </div>
                         <p class="text-xs sm:text-sm text-stone-600 font-semibold mt-1">
-                            High Concentration 30% System · Carrier Formula Base
+                            Dynamic Concentration System (20%–40%+) · Carrier Base Spec
                         </p>
                     </div>
                 </div>
 
                 <!-- QUICK METRIC BADGES -->
                 <div class="hidden sm:flex items-center gap-2 text-xs font-bold">
-                    <span class="bg-amber-100/90 text-amber-950 border border-amber-300 px-3 py-1.5 rounded-xl shadow-depth-sm">
-                        ⚗️ Extrait / EDP 30%
+                    <span id="headerConcBadge" class="bg-amber-100/90 text-amber-950 border border-amber-300 px-3 py-1.5 rounded-xl shadow-depth-sm">
+                        ⚗️ Fragrance Conc. 30% (ปรับได้ 20%-40%)
                     </span>
                     <span class="bg-blue-100/90 text-blue-950 border border-blue-300 px-3 py-1.5 rounded-xl shadow-depth-sm">
                         🧪 Carrier: DEB95 68% + DPG 30% + IPM 5%
-                    </span>
-                    <span class="bg-emerald-100/90 text-emerald-950 border border-emerald-300 px-3 py-1.5 rounded-xl shadow-depth-sm">
-                        👕 ติดทน 24–36 ชม.
                     </span>
                 </div>
             </div>
@@ -217,7 +214,7 @@
                         📊 กราฟมิติกลิ่น
                     </button>
                     <button onclick="switchTab('view-lab', this)" class="tab-btn btn-3d px-4.5 py-2 rounded-2xl text-xs sm:text-sm font-bold whitespace-nowrap text-stone-700 hover:bg-stone-200/80 active:scale-95">
-                        ⚖️ เครื่องคิดเลขแล็บ
+                        ⚖️ เครื่องคิดเลขแล็บ (% กำหนดได้)
                     </button>
                     <button onclick="switchTab('view-library', this)" class="tab-btn btn-3d px-4.5 py-2 rounded-2xl text-xs sm:text-sm font-bold whitespace-nowrap text-stone-700 hover:bg-stone-200/80 active:scale-95">
                         📚 คลัง 14 โน้ต
@@ -237,12 +234,12 @@
                         💡 ขั้นตอนผสมมาตรฐาน (2-Phase Blending Method)
                     </span>
                     <span class="text-xs sm:text-sm font-mono font-extrabold text-amber-950 bg-white/80 px-3 py-0.5 rounded-lg border border-amber-300/60 shadow-2xs">
-                        Fragrance 30% · Citropol F 2% · Carrier 68%
+                        Fragrance (20%-40%) · Citropol F 2% · Carrier Base (68%)
                     </span>
                 </div>
                 <p class="text-xs sm:text-sm text-amber-950 font-medium leading-relaxed mt-1">
-                    <b> Phase A (ผสมขั้นที่ 1):</b> นำ Citropol F 2% ผสมเข้ากับหัวน้ำหอม (30%) ให้เข้ากันเป็นเนื้อเดียวกันก่อน<br class="hidden sm:inline">
-                    <b> Phase B (ผสมขั้นที่ 2):</b> เตรียม Carrier Base สูตรเฉพาะ (DEB95 68% + DPG 30% + IPM 5%) แล้วนำ Phase A มาผสมรวมกับ Carrier
+                    <b> Phase A (ผสมขั้นที่ 1):</b> นำ Citropol F 2% ผสมเข้ากับหัวน้ำหอม (ตาม % ที่คุณเลือก เช่น 30% หรือ 40%) ให้เข้ากันเป็นเนื้อเดียวกันก่อน<br class="hidden sm:inline">
+                    <b> Phase B (ผสมขั้นที่ 2):</b> เตรียม Carrier Base สูตรเฉพาะ (DEB95 68% + DPG 30% + IPM 5%) แล้วนำ Phase A เทผสมรวมลงใน Carrier Base
                 </p>
             </div>
 
@@ -255,10 +252,10 @@
                             <span>🗓️</span> เลือกระบุวันเกิดประจำสูตร
                         </h2>
                         <p class="text-xs sm:text-sm text-stone-600 font-medium mt-1">
-                            ความเข้มข้นหัวน้ำหอม 30% (Top 15% + Heart 12% + Base Musk 3%)
+                            โครงสร้างสัดส่วนหัวน้ำหอม: Top Note (50%) + Heart Note (40%) + Base Musk (10%)
                         </p>
                     </div>
-                    <span class="text-xs sm:text-sm bg-stone-100 text-stone-800 px-3.5 py-1.5 rounded-2xl font-bold border border-stone-200 shadow-2xs hidden sm:inline">
+                    <span class="text-xs sm:text-sm bg-amber-100 text-amber-950 px-3.5 py-1.5 rounded-2xl font-bold border border-amber-300 shadow-2xs hidden sm:inline">
                         7 สูตรไม่ซ้ำ
                     </span>
                 </div>
@@ -282,26 +279,26 @@
                     <div class="border-b border-amber-900/60 pb-4 flex justify-between items-start flex-wrap gap-3">
                         <div>
                             <span class="text-xs font-bold text-amber-400 tracking-wider uppercase bg-amber-950/90 px-3 py-1 rounded-full border border-amber-800/80 shadow-2xs">
-                                ⚗️ Master Formulation Spec (30% Load + Carrier Base System)
+                                ⚗️ Master Formulation Spec (Dynamic Fragrance Load & Carrier)
                             </span>
-                            <h2 class="text-xl sm:text-2xl font-extrabold text-amber-100 mt-2.5">โครงสร้างสูตรหัวน้ำหอม 30% และ Carrier Base</h2>
+                            <h2 class="text-xl sm:text-2xl font-extrabold text-amber-100 mt-2.5">โครงสร้างการปรับเปอร์เซ็นต์หัวน้ำหอม และ Carrier Base</h2>
                         </div>
                         <span class="text-xs sm:text-sm bg-amber-500/20 text-amber-300 border border-amber-500/40 px-3.5 py-1.5 rounded-full font-mono font-bold shadow-2xs">
-                            Fragrance 30% + Carrier 68%
+                            ปรับความเข้มข้นได้ 20% ถึง 40%+
                         </span>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-xs sm:text-sm">
                         <div class="bg-[#2A1018] p-4.5 rounded-2xl border border-amber-900/50 shadow-depth-sm transition-transform hover:scale-[1.02]">
-                            <div class="text-amber-400 font-bold mb-1 text-xs">Fragrance Load (30%)</div>
-                            <div class="text-white text-base font-extrabold">Top 15% + Heart 12% + Musk 3%</div>
-                            <div class="text-amber-200/80 text-xs mt-1.5 leading-relaxed">สัดส่วนหัวน้ำหอมเข้มข้นระดับ Extrait/EDP กลิ่นแน่นติดทนนานข้ามวัน</div>
+                            <div class="text-amber-400 font-bold mb-1 text-xs">Fragrance Load (20% – 40%+)</div>
+                            <div class="text-white text-base font-extrabold">Top 50% + Heart 40% + Musk 10%</div>
+                            <div class="text-amber-200/80 text-xs mt-1.5 leading-relaxed">แบ่งสัดส่วนน้ำมันหอมอัตโนมัติตาม % ความเข้มข้นที่คุณเลือกในแล็บ</div>
                         </div>
 
                         <div class="bg-[#2A1018] p-4.5 rounded-2xl border border-emerald-900/50 shadow-depth-sm transition-transform hover:scale-[1.02]">
-                            <div class="text-emerald-400 font-bold mb-1 text-xs">Citropol F (2%)</div>
+                            <div class="text-emerald-400 font-bold mb-1 text-xs">Citropol F (2% ของขวด)</div>
                             <div class="text-white text-base font-extrabold">Top Note Lock Complex</div>
-                            <div class="text-emerald-200/80 text-xs mt-1.5 leading-relaxed"><b>*ต้องผสมเข้ากับหัวน้ำหอม 30% (Phase A) ก่อน</b> เพื่อล็อกกลิ่นผลไม้และส้มให้อยู่นานขึ้น</div>
+                            <div class="text-emerald-200/80 text-xs mt-1.5 leading-relaxed"><b>*ต้องผสมเข้ากับหัวน้ำหอม (Phase A) ก่อน</b> เพื่อล็อกกลิ่นผลไม้และส้มให้อยู่นานขึ้น</div>
                         </div>
 
                         <div class="bg-[#2A1018] p-4.5 rounded-2xl border border-blue-900/50 shadow-depth-sm transition-transform hover:scale-[1.02]">
@@ -325,7 +322,7 @@
                         <div class="bg-[#2A1018] p-4.5 rounded-2xl border border-stone-700/60 shadow-depth-sm transition-transform hover:scale-[1.02]">
                             <div class="text-stone-300 font-bold mb-1 text-xs">Carrier Base Standard Ratio</div>
                             <div class="text-white text-base font-extrabold">DEB95 68% : DPG 30% : IPM 5%</div>
-                            <div class="text-stone-300/80 text-xs mt-1.5 leading-relaxed">อัตราส่วน Carrier เบสเฉพาะ ปรับปรุงตามสูตรห้องแล็บล่าสุด</div>
+                            <div class="text-stone-300/80 text-xs mt-1.5 leading-relaxed">อัตราส่วน Carrier เบสเฉพาะ เติมส่วนที่เหลือให้ครบ 100% ของขวด</div>
                         </div>
                     </div>
 
@@ -333,12 +330,12 @@
                     <div class="p-5 bg-[#250D15] rounded-2xl border border-amber-900/60 space-y-3 shadow-inner">
                         <div class="flex justify-between items-center text-xs sm:text-sm font-bold text-amber-300 flex-wrap gap-2">
                             <span>ขั้นตอนการผสมในห้องแล็บ (Step-by-Step)</span>
-                            <span class="text-amber-200 font-mono bg-amber-950/80 px-3 py-1 rounded-lg border border-amber-800/60">Phase A (Fragrance+Citropol) ➔ Phase B (Carrier Base)</span>
+                            <span class="text-amber-200 font-mono bg-amber-950/80 px-3 py-1 rounded-lg border border-amber-800/60">Phase A (Fragrance + Citropol F 2%) ➔ Phase B (Carrier Base)</span>
                         </div>
                         <div class="h-6 w-full rounded-full overflow-hidden flex bg-stone-900 text-xs font-extrabold shadow-inner p-0.5 border border-amber-900/40">
-                            <div style="width: 15%;" class="bg-amber-500 text-stone-900 flex items-center justify-center rounded-l-full" title="Top Note 15%">Top 15%</div>
-                            <div style="width: 12%;" class="bg-pink-600 text-white flex items-center justify-center" title="Heart Note 12%">Heart 12%</div>
-                            <div style="width: 3%;" class="bg-purple-600 text-white flex items-center justify-center" title="Musk 3%">Musk 3%</div>
+                            <div style="width: 15%;" class="bg-amber-500 text-stone-900 flex items-center justify-center rounded-l-full" title="Top Note (50% ของหัวน้ำหอม)">Top</div>
+                            <div style="width: 12%;" class="bg-pink-600 text-white flex items-center justify-center" title="Heart Note (40% ของหัวน้ำหอม)">Heart</div>
+                            <div style="width: 3%;" class="bg-purple-600 text-white flex items-center justify-center" title="Musk (10% ของหัวน้ำหอม)">Musk</div>
                             <div style="width: 2%;" class="bg-emerald-500 text-stone-900 flex items-center justify-center" title="Citropol 2%">Citropol 2%</div>
                             <div style="width: 68%;" class="bg-blue-700 text-white flex items-center justify-center rounded-r-full">Carrier Base (DEB95 68% + DPG 30% + IPM 5%)</div>
                         </div>
@@ -355,7 +352,7 @@
                         </span>
                         <h2 class="text-lg sm:text-2xl font-extrabold text-stone-900 mt-2.5">แผนภูมิเปรียบเทียบมิติกลิ่น 7 วันเกิด</h2>
                         <p class="text-xs sm:text-sm text-stone-600 font-medium mt-1 leading-relaxed">
-                            กราฟเรดาร์แสดงการกระจายตัวของตระกูลกลิ่นทั้ง 6 เพื่อยืนยันว่าสูตรปรับใหม่หัวน้ำหอม 30% มีความสมดุลและไม่ซ้ำซ้อนกัน
+                            กราฟเรดาร์แสดงการกระจายตัวของตระกูลกลิ่นทั้ง 6 เพื่อยืนยันว่าสูตรปรับหัวน้ำหอมตามความเข้มข้น มีความสมดุลและไม่ซ้ำซ้อนกัน
                         </p>
                     </div>
 
@@ -371,16 +368,16 @@
                 </div>
             </section>
 
-            <!-- SECTION 4: BLEND CALCULATOR LAB -->
+            <!-- SECTION 4: BLEND CALCULATOR LAB WITH DYNAMIC FRAGRANCE LOAD % -->
             <section id="view-lab" class="tab-content hidden animate-view-in space-y-5">
                 <div class="glass-card-elevated p-5 sm:p-7 rounded-3xl space-y-5">
                     <div class="mb-2">
                         <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-950 bg-emerald-100 border border-emerald-300 px-3.5 py-1 rounded-full shadow-2xs">
-                            Perfumer's Lab Calculator
+                            Perfumer's Lab Calculator (Dynamic Conc. %)
                         </span>
-                        <h2 class="text-lg sm:text-2xl font-extrabold text-stone-900 mt-2.5">เครื่องคิดเลขตวงสูตรผสม (30% Load + Carrier System)</h2>
+                        <h2 class="text-lg sm:text-2xl font-extrabold text-stone-900 mt-2.5">เครื่องคิดเลขตวงสูตรผสม (เลือก % หัวน้ำหอม 20% - 40%+)</h2>
                         <p class="text-xs sm:text-sm text-stone-600 font-medium mt-1 leading-relaxed">
-                            คำนวณปริมาณ ml / g แยกตาม <b>Phase A (หัวน้ำหอม + Citropol F)</b> และ <b>Phase B (Carrier Base: DEB95 68%, DPG 30%, IPM 5%)</b> ให้อัตโนมัติตามขนาดขวดที่ระบุ
+                            กำหนดเปอร์เซ็นต์ความเข้มข้นหัวน้ำหอมและขนาดขวดได้ตามต้องการ ระบบจะคำนวณแยก <b>Phase A (หัวน้ำหอม + Citropol F 2%)</b> และ <b>Phase B (Carrier Base: DEB95 68%, DPG 30%, IPM 5%)</b> ให้อัตโนมัติทันที
                         </p>
                     </div>
 
@@ -394,9 +391,30 @@
                                 </select>
                             </div>
 
+                            <!-- NEW: DYNAMIC FRAGRANCE LOAD % SELECTOR -->
                             <div>
-                                <label class="block text-xs sm:text-sm font-extrabold text-stone-800 mb-2">2. เลือกขนาดขวดบรรจุ (ml)</label>
-                                <div class="grid grid-cols-4 gap-2 mb-3">
+                                <div class="flex justify-between items-center mb-2">
+                                    <label class="block text-xs sm:text-sm font-extrabold text-stone-800">2. กำหนด % หัวน้ำหอม (Fragrance Load)</label>
+                                    <span class="text-xs font-mono font-extrabold text-amber-900 bg-amber-100 border border-amber-300 px-2.5 py-0.5 rounded-md" id="currentConcDisplay">30%</span>
+                                </div>
+                                
+                                <div class="grid grid-cols-5 gap-1.5 mb-2.5">
+                                    <button onclick="setCalcConc(20)" class="btn-conc btn-3d py-2 text-xs bg-white border border-stone-200 rounded-xl hover:bg-stone-50 font-extrabold text-stone-800 active:scale-95">20%</button>
+                                    <button onclick="setCalcConc(25)" class="btn-conc btn-3d py-2 text-xs bg-white border border-stone-200 rounded-xl hover:bg-stone-50 font-extrabold text-stone-800 active:scale-95">25%</button>
+                                    <button onclick="setCalcConc(30)" class="btn-conc btn-3d py-2 text-xs bg-stone-900 border border-stone-900 rounded-xl text-amber-300 font-extrabold active:scale-95 shadow-depth-sm">30%</button>
+                                    <button onclick="setCalcConc(35)" class="btn-conc btn-3d py-2 text-xs bg-white border border-stone-200 rounded-xl hover:bg-stone-50 font-extrabold text-stone-800 active:scale-95">35%</button>
+                                    <button onclick="setCalcConc(40)" class="btn-conc btn-3d py-2 text-xs bg-white border border-stone-200 rounded-xl hover:bg-stone-50 font-extrabold text-stone-800 active:scale-95">40%</button>
+                                </div>
+
+                                <div class="flex items-center gap-3">
+                                    <input type="range" id="calcConcSlider" min="15" max="50" step="1" value="30" oninput="onConcSliderChange(this.value)" class="w-full accent-amber-600 h-2 bg-stone-200 rounded-lg cursor-pointer">
+                                    <input type="number" id="calcConcInput" value="30" min="5" max="60" oninput="calculateFormula()" class="w-20 bg-white border border-stone-300 rounded-xl px-2.5 py-1.5 text-xs font-bold text-center focus:outline-none focus:ring-2 focus:ring-stone-800 shadow-depth-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs sm:text-sm font-extrabold text-stone-800 mb-2">3. เลือกขนาดขวดบรรจุ (ml)</label>
+                                <div class="grid grid-cols-4 gap-2 mb-2.5">
                                     <button onclick="setCalcVolume(30)" class="btn-3d py-2.5 text-xs sm:text-sm bg-white border border-stone-200 rounded-xl hover:bg-stone-50 font-extrabold text-stone-800 active:scale-95">30 ml</button>
                                     <button onclick="setCalcVolume(50)" class="btn-3d py-2.5 text-xs sm:text-sm bg-white border border-stone-200 rounded-xl hover:bg-stone-50 font-extrabold text-stone-800 active:scale-95">50 ml</button>
                                     <button onclick="setCalcVolume(100)" class="btn-3d py-2.5 text-xs sm:text-sm bg-white border border-stone-200 rounded-xl hover:bg-stone-50 font-extrabold text-stone-800 active:scale-95">100 ml</button>
@@ -413,7 +431,7 @@
                                 <p class="leading-relaxed font-medium">
                                     1. ผสม <b>Citropol F (2%)</b> เข้ากับหัวน้ำหอม Top + Heart + Musk รวมเป็น <b>Phase A</b> คนให้เข้ากันก่อน<br>
                                     2. ผสมตัวทำละลาย Carrier (DEB95 + DPG + IPM) เป็น <b>Phase B</b><br>
-                                    3. นำ Phase A ค่อยๆ เทผสมลงใน Phase B แล้วคน/เขย่าให้ใสเป็นเนื้อเดียวกัน
+                                    3. นำ Phase A เทผสมลงใน Phase B แล้วคน/เขย่าให้ใสเป็นเนื้อเดียวกัน
                                 </p>
                             </div>
                         </div>
@@ -421,9 +439,12 @@
                         <!-- Calculation Output Card with 3D Dark Glow -->
                         <div class="glass-dark-card text-amber-100 p-6 rounded-2xl space-y-5 flex flex-col justify-between">
                             <div>
-                                <div class="flex justify-between items-center border-b border-amber-900/60 pb-3.5">
+                                <div class="flex justify-between items-center border-b border-amber-900/60 pb-3.5 flex-wrap gap-2">
                                     <span class="text-xs sm:text-sm font-extrabold text-amber-300" id="calcResultTitle">สูตรน้ำหอม</span>
-                                    <span class="text-xs sm:text-sm bg-amber-950/90 text-amber-200 px-3.5 py-1 rounded-full font-mono font-bold border border-amber-800/60 shadow-2xs" id="calcResultTotal">50 ml</span>
+                                    <div class="flex gap-2">
+                                        <span class="text-xs bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full font-mono font-bold border border-amber-500/40" id="calcResultConcBadge">Load 30%</span>
+                                        <span class="text-xs bg-amber-950/90 text-amber-200 px-3.5 py-1 rounded-full font-mono font-bold border border-amber-800/60 shadow-2xs" id="calcResultTotal">50 ml</span>
+                                    </div>
                                 </div>
 
                                 <div class="space-y-3 mt-4 text-xs sm:text-sm font-medium" id="calcResultBody">
@@ -433,11 +454,11 @@
 
                             <div class="pt-4 border-t border-amber-900/60 space-y-1.5">
                                 <div class="flex justify-between items-center text-xs sm:text-sm">
-                                    <span class="text-amber-200/90 font-medium">หัวน้ำหอมรวมทั้งหมด (Fragrance Load 30%):</span>
-                                    <span class="text-amber-300 font-extrabold text-base sm:text-lg" id="calcTotalOil">15.00 ml / g</span>
+                                    <span class="text-amber-200/90 font-medium">หัวน้ำหอมรวมทั้งหมด:</span>
+                                    <span class="text-amber-300 font-extrabold text-base sm:text-lg" id="calcTotalOil">15.00 ml / g (30%)</span>
                                 </div>
                                 <p class="text-xs text-emerald-300 font-semibold mt-1" id="calcRatioNotice">
-                                    ⏱️ *คำนวณตามสูตร High Concentration 30% System + Carrier Base Standard
+                                    ⏱️ *คำนวณตามสัดส่วน Phase A (หัวน้ำหอม + Citropol F 2%) + Carrier Phase B (DEB95 68%: DPG 30%: IPM 5%)
                                 </p>
                             </div>
                         </div>
@@ -502,14 +523,14 @@
     <!-- FOOTER -->
     <footer class="bg-white/80 border-t border-stone-200/80 py-5 px-4 text-center text-xs sm:text-sm text-stone-600 mt-10">
         <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <span class="font-bold">🌸 ละมุน บาย LKN — 7-Day Birthday Perfume Collection (30% Fragrance System)</span>
+            <span class="font-bold">🌸 ละมุน บาย LKN — 7-Day Birthday Perfume Collection (Dynamic Fragrance System)</span>
             <span class="text-xs text-stone-500 font-medium">สูตร Carrier Base: DEB95 (68%) + DPG (30%) + IPM (5%) + Citropol F (2%)</span>
         </div>
     </footer>
 
     <!-- JAVASCRIPT APPLICATION LOGIC -->
     <script>
-        // DATA STRUCTURE FOR THE 30% FRAGRANCE SYSTEM
+        // DATA STRUCTURE FOR THE FRAGRANCE SYSTEM
         const DAYS_DATA = [
             {
                 id: 'sun',
@@ -527,9 +548,8 @@
                 mood: 'มั่นใจ สว่างใส',
                 season: 'ทุกฤดู',
                 time: 'กลางวัน',
-                top: { name: 'Champagne Toast', pct: 15, family: 'Sparkling Fruity / Citrus Fizz', longevity: 4, booklet: 'เข้ากับ Kyoho Grape, Charming, Freesia' },
-                heart: { name: 'Honey Bee', pct: 12, family: 'Warm Honey / Gourmand Fixative', longevity: 8, booklet: 'เข้ากับ Apple, Ginger, Tea Rose, White Tea' },
-                baseMusk: 3,
+                top: { name: 'Champagne Toast', family: 'Sparkling Fruity / Citrus Fizz', longevity: 4, booklet: 'เข้ากับ Kyoho Grape, Charming, Freesia' },
+                heart: { name: 'Honey Bee', family: 'Warm Honey / Gourmand Fixative', longevity: 8, booklet: 'เข้ากับ Apple, Ginger, Tea Rose, White Tea' },
                 scores: [30, 20, 85, 40, 95, 60]
             },
             {
@@ -548,9 +568,8 @@
                 mood: 'ลึกลับ Exotic',
                 season: 'หนาว/ใบไม้ร่วง',
                 time: 'กลางคืน',
-                top: { name: 'Classic Sakura', pct: 15, family: 'Powdery Soft Floral', longevity: 6, booklet: 'เข้ากับ Milk, Vanilla Extract, Freesia' },
-                heart: { name: 'Michelia (ดอกจำปี)', pct: 12, family: 'Exotic White Floral', longevity: 7, booklet: 'เข้ากับ Royal Lotus, Pandan, Vanilla, White Tea' },
-                baseMusk: 3,
+                top: { name: 'Classic Sakura', family: 'Powdery Soft Floral', longevity: 6, booklet: 'เข้ากับ Milk, Vanilla Extract, Freesia' },
+                heart: { name: 'Michelia (ดอกจำปี)', family: 'Exotic White Floral', longevity: 7, booklet: 'เข้ากับ Royal Lotus, Pandan, Vanilla, White Tea' },
                 scores: [15, 85, 30, 90, 20, 50]
             },
             {
@@ -569,9 +588,8 @@
                 mood: 'มีพลัง เย้ายวน',
                 season: 'ทุกฤดู',
                 time: 'เช้า–กลางคืน',
-                top: { name: 'Kyoho Grape', pct: 15, family: 'Juicy Dark Grape / Fruity', longevity: 5, booklet: 'เข้ากับ Champagne Toast, Velvet Sugar, Milk' },
-                heart: { name: 'Charming GP1107J', pct: 12, family: 'Chypre Fruity-Floral / Seductive', longevity: 9, booklet: 'เข้ากับ Champagne Toast, Kyoho Grape, Freesia, Woody Sage' },
-                baseMusk: 3,
+                top: { name: 'Kyoho Grape', family: 'Juicy Dark Grape / Fruity', longevity: 5, booklet: 'เข้ากับ Champagne Toast, Velvet Sugar, Milk' },
+                heart: { name: 'Charming GP1107J', family: 'Chypre Fruity-Floral / Seductive', longevity: 9, booklet: 'เข้ากับ Champagne Toast, Kyoho Grape, Freesia, Woody Sage' },
                 scores: [20, 20, 95, 80, 40, 75]
             },
             {
@@ -590,9 +608,8 @@
                 mood: 'สดชื่น หวานนุ่ม',
                 season: 'ร้อน/ใบไม้ผลิ',
                 time: 'เช้า–บ่าย',
-                top: { name: 'Green Apple', pct: 15, family: 'Crisp Tart Fruity', longevity: 3, booklet: 'เข้ากับ Cantaloup, Blooming Bouquet, Freesia, Velvet Sugar' },
-                heart: { name: 'Velvet Sugar', pct: 12, family: 'Sweet Sugary Cupcake / Fruity', longevity: 7, booklet: 'เข้ากับ Blooming Bouquet, Kyoho Grape, Vanilla' },
-                baseMusk: 3,
+                top: { name: 'Green Apple', family: 'Crisp Tart Fruity', longevity: 3, booklet: 'เข้ากับ Cantaloup, Blooming Bouquet, Freesia, Velvet Sugar' },
+                heart: { name: 'Velvet Sugar', family: 'Sweet Sugary Cupcake / Fruity', longevity: 7, booklet: 'เข้ากับ Blooming Bouquet, Kyoho Grape, Vanilla' },
                 scores: [40, 60, 85, 65, 50, 30]
             },
             {
@@ -611,9 +628,8 @@
                 mood: 'หรูหรา Oriental',
                 season: 'ใบไม้ร่วง/หนาว',
                 time: 'บ่าย–กลางคืน',
-                top: { name: 'English Pear & Flower', pct: 15, family: 'Fruity Floral Chypre (Jo Malone Vibe)', longevity: 7, booklet: 'เข้ากับ Woody Sage, White Tea, Tea Rose, Madame Coco' },
-                heart: { name: 'Madame Coco', pct: 12, family: 'Amber Oriental / Warm Spicy (Chanel Vibe)', longevity: 10, booklet: 'เข้ากับ Tea Rose, Vanilla Extract, English Pear' },
-                baseMusk: 3,
+                top: { name: 'English Pear & Flower', family: 'Fruity Floral Chypre (Jo Malone Vibe)', longevity: 7, booklet: 'เข้ากับ Woody Sage, White Tea, Tea Rose, Madame Coco' },
+                heart: { name: 'Madame Coco', family: 'Amber Oriental / Warm Spicy (Chanel Vibe)', longevity: 10, booklet: 'เข้ากับ Tea Rose, Vanilla Extract, English Pear' },
                 scores: [20, 30, 75, 70, 60, 95]
             },
             {
@@ -632,9 +648,8 @@
                 mood: 'โรแมนติก ครีมมี่',
                 season: 'ใบไม้ผลิ/ร้อน',
                 time: 'ตลอดวัน',
-                top: { name: 'Blooming Bouquet', pct: 15, family: 'Soft Floral / Pink Petals (Dior Vibe)', longevity: 6, booklet: 'เข้ากับ Green Apple, Velvet Sugar, Freesia' },
-                heart: { name: 'Milk', pct: 12, family: 'Lactonic / Creamy Sweet', longevity: 7, booklet: 'เข้ากับ Mango, Cocoa, Sakura, Pandan' },
-                baseMusk: 3,
+                top: { name: 'Blooming Bouquet', family: 'Soft Floral / Pink Petals (Dior Vibe)', longevity: 6, booklet: 'เข้ากับ Green Apple, Velvet Sugar, Freesia' },
+                heart: { name: 'Milk', family: 'Lactonic / Creamy Sweet', longevity: 7, booklet: 'เข้ากับ Mango, Cocoa, Sakura, Pandan' },
                 scores: [15, 20, 60, 95, 75, 40]
             },
             {
@@ -653,9 +668,8 @@
                 mood: 'ลึกลับ Seductive',
                 season: 'ใบไม้ร่วง/หนาว',
                 time: 'กลางคืน',
-                top: { name: 'Goji Berry', pct: 15, family: 'Tangy Red Berry / Fruity', longevity: 4, booklet: 'เข้ากับ Blooming Bouquet, Vanilla Extract, Apple' },
-                heart: { name: 'Chocolate', pct: 12, family: 'Dark Gourmand (Heart to Base)', longevity: 9, booklet: 'เข้ากับ Milk, Vanilla Extract, Kyoho Grape, Ginger' },
-                baseMusk: 3,
+                top: { name: 'Goji Berry', family: 'Tangy Red Berry / Fruity', longevity: 4, booklet: 'เข้ากับ Blooming Bouquet, Vanilla Extract, Apple' },
+                heart: { name: 'Chocolate', family: 'Dark Gourmand (Heart to Base)', longevity: 9, booklet: 'เข้ากับ Milk, Vanilla Extract, Kyoho Grape, Ginger' },
                 scores: [10, 10, 80, 40, 95, 90]
             }
         ];
@@ -741,6 +755,12 @@
                 }
             });
 
+            // Get Current Fragrance Load % setting
+            const currentConcPct = parseFloat(document.getElementById('calcConcInput')?.value) || 30;
+            const topPct = (currentConcPct * 0.50).toFixed(1);
+            const heartPct = (currentConcPct * 0.40).toFixed(1);
+            const muskPct = (currentConcPct * 0.10).toFixed(1);
+
             // Update Card Details
             const card = document.getElementById('activeDayCard');
 
@@ -762,6 +782,9 @@
                             </span>
                             <span class="text-xs sm:text-sm bg-stone-900 text-amber-300 font-extrabold px-3.5 py-1 rounded-full shadow-2xs">
                                 🕐 ผิว ${day.skinH} ชม. · ผ้า ${day.fabricH} ชม.
+                            </span>
+                            <span class="text-xs sm:text-sm bg-amber-100 text-amber-950 border border-amber-300 font-extrabold px-3 py-1 rounded-full shadow-2xs">
+                                ⚗️ Fragrance Load: ${currentConcPct}%
                             </span>
                         </div>
                         <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900 mt-2">${day.nameTh} <span class="text-base sm:text-lg font-normal text-stone-500">(${day.dayEn})</span></h3>
@@ -789,7 +812,7 @@
                 <!-- FRAGRANCE PYRAMID BREAKDOWN -->
                 <div class="space-y-4 pt-1">
                     <h4 class="text-xs sm:text-sm font-extrabold text-stone-900 uppercase tracking-wider flex items-center gap-2">
-                        <span>🧪</span> Fragrance Pyramid (หัวน้ำหอมรวม 30% + Citropol F 2%)
+                        <span>🧪</span> Fragrance Pyramid (หัวน้ำหอมรวม ${currentConcPct}% + Citropol F 2%)
                     </h4>
 
                     <div class="space-y-3 text-xs sm:text-sm">
@@ -798,11 +821,11 @@
                             <div class="space-y-1">
                                 <div class="flex items-center gap-2 flex-wrap">
                                     <span class="w-3.5 h-3.5 rounded-full flex-shrink-0 shadow-2xs" style="background-color: ${day.color}"></span>
-                                    <span class="font-extrabold text-stone-900 uppercase">🌿 Top Note (15%)</span>
+                                    <span class="font-extrabold text-stone-900 uppercase">🌿 Top Note (${topPct}%)</span>
                                     <span class="text-xs bg-stone-900 text-amber-300 px-2.5 py-0.5 rounded-md font-mono font-bold">${day.top.longevity}/10 Longevity</span>
                                 </div>
                                 <div class="font-extrabold text-stone-900 text-base sm:text-lg ml-5.5">${day.top.name}</div>
-                                <div class="text-stone-600 font-medium ml-5.5 text-xs sm:text-sm">${day.top.family} — 15% ของ Batch</div>
+                                <div class="text-stone-600 font-medium ml-5.5 text-xs sm:text-sm">${day.top.family} — สัดส่วน 50% ของหัวน้ำหอม</div>
                             </div>
                             <div class="text-xs sm:text-sm bg-amber-50 text-amber-950 border border-amber-200/90 p-2.5 rounded-xl sm:max-w-xs font-semibold shadow-2xs">
                                 📖 Booklet Tip: ${day.top.booklet}
@@ -814,11 +837,11 @@
                             <div class="space-y-1">
                                 <div class="flex items-center gap-2 flex-wrap">
                                     <span class="w-3.5 h-3.5 rounded-full bg-pink-600 flex-shrink-0 shadow-2xs"></span>
-                                    <span class="font-extrabold text-pink-950 uppercase">🌸 Heart Note (12%)</span>
+                                    <span class="font-extrabold text-pink-950 uppercase">🌸 Heart Note (${heartPct}%)</span>
                                     <span class="text-xs bg-stone-900 text-amber-300 px-2.5 py-0.5 rounded-md font-mono font-bold">${day.heart.longevity}/10 Longevity</span>
                                 </div>
                                 <div class="font-extrabold text-stone-900 text-base sm:text-lg ml-5.5">${day.heart.name}</div>
-                                <div class="text-stone-600 font-medium ml-5.5 text-xs sm:text-sm">${day.heart.family} — 12% ของ Batch</div>
+                                <div class="text-stone-600 font-medium ml-5.5 text-xs sm:text-sm">${day.heart.family} — สัดส่วน 40% ของหัวน้ำหอม</div>
                             </div>
                             <div class="text-xs sm:text-sm bg-pink-50 text-pink-950 border border-pink-200/90 p-2.5 rounded-xl sm:max-w-xs font-semibold shadow-2xs">
                                 📖 Booklet Tip: ${day.heart.booklet}
@@ -830,14 +853,14 @@
                             <div class="space-y-1">
                                 <div class="flex items-center gap-2 flex-wrap">
                                     <span class="w-3.5 h-3.5 rounded-full bg-purple-700 flex-shrink-0 shadow-2xs"></span>
-                                    <span class="font-extrabold text-purple-950 uppercase">🌑 Base — Musk 100% (3%)</span>
+                                    <span class="font-extrabold text-purple-950 uppercase">🌑 Base — Musk 100% (${muskPct}%)</span>
                                     <span class="text-xs bg-purple-950 text-purple-100 px-2.5 py-0.5 rounded-md font-mono font-bold">10/10 Longevity</span>
                                 </div>
                                 <div class="font-extrabold text-purple-950 text-base sm:text-lg ml-5.5">Musk 100% (Pre-dilute 1:1 DPG)</div>
-                                <div class="text-purple-900 font-medium ml-5.5 text-xs sm:text-sm">Skin Base Note ติดทนสูงสุด ใส่ปริมาณ 3% ในทุกสูตร</div>
+                                <div class="text-purple-900 font-medium ml-5.5 text-xs sm:text-sm">Skin Base Note ติดทนสูงสุด — สัดส่วน 10% ของหัวน้ำหอม</div>
                             </div>
                             <div class="text-xs sm:text-sm bg-purple-100 text-purple-950 border border-purple-300 p-2.5 rounded-xl font-bold sm:max-w-xs shadow-2xs">
-                                🔒 ล็อกกลิ่นให้ติดผิวทนทานเกิน 12–16+ ชม.
+                                🔒 ล็อกกลิ่นให้ติดผิวทนทานข้ามวัน
                             </div>
                         </div>
 
@@ -849,7 +872,7 @@
                                     <span class="font-extrabold text-emerald-950 uppercase">🛡️ Citropol F (2% - ผสมเข้ากับหัวน้ำหอมก่อน)</span>
                                 </div>
                                 <div class="font-extrabold text-emerald-950 text-base sm:text-lg ml-5.5">Citropol F (Top Lock Complex)</div>
-                                <div class="text-emerald-900 font-medium ml-5.5 text-xs sm:text-sm"><b>*ผสมกับ Phase A ก่อน:</b> ล็อกกลิ่นผลไม้/ส้มให้อยู่ทนนานขึ้น 2–4 เท่า</div>
+                                <div class="text-emerald-900 font-medium ml-5.5 text-xs sm:text-sm"><b>*ผสมกับ Phase A ก่อน:</b> ล็อกกลิ่นผลไม้/ส้มให้อยู่นานขึ้น 2–4 เท่า</div>
                             </div>
                             <div class="text-xs sm:text-sm bg-emerald-100 text-emerald-950 border border-emerald-300 p-2.5 rounded-xl font-bold sm:max-w-xs shadow-2xs">
                                 ⚗️ Phase A Mix Ready
@@ -861,11 +884,11 @@
                 <!-- CARRIER BASE SUMMARY BLOCK -->
                 <div class="p-4 rounded-2xl bg-blue-50/80 border border-blue-200 space-y-2 shadow-inner">
                     <div class="flex justify-between items-center text-xs sm:text-sm font-extrabold text-blue-950">
-                        <span>🧪 สูตร Carrier Base ของคุณ (68% ของทั้งขวด):</span>
+                        <span>🧪 สูตร Carrier Base ของคุณ (เติมส่วนที่เหลือใน Phase B):</span>
                         <span class="bg-blue-200 text-blue-950 px-3 py-0.5 rounded-full">DEB95 68% · DPG 30% · IPM 5%</span>
                     </div>
                     <p class="text-xs text-blue-900 font-medium leading-relaxed">
-                        ผสมสารทำละลาย Carrier ทั้งสามชนิดให้ละลายเข้ากันเป็น <b>Phase B</b> จากนั้นนำ Phase A (หัวน้ำหอม 30% + Citropol F 2%) ที่เตรียมไว้ล่วงหน้า เทผสมรวมลงไป บ่มพักกลิ่นก่อนบรรจุขวด
+                        ผสมสารทำละลาย Carrier ทั้งสามชนิดให้ละลายเข้ากันเป็น <b>Phase B</b> จากนั้นนำ Phase A (หัวน้ำหอม ${currentConcPct}% + Citropol F 2%) ที่เตรียมไว้ล่วงหน้า เทผสมรวมลงไป บ่มพักกลิ่นก่อนบรรจุขวด
                     </p>
                 </div>
 
@@ -970,15 +993,16 @@
         function updateRadarSummary(day) {
             const el = document.getElementById('radarSummaryBox');
             if (!el) return;
+            const currentConcPct = parseFloat(document.getElementById('calcConcInput')?.value) || 30;
             el.innerHTML = `
                 <div class="p-4 rounded-2xl bg-stone-100/90 border border-stone-200/90 shadow-inner font-medium">
                     <span class="font-extrabold" style="color: ${day.color}">${day.icon} ${day.dayTh} (${day.nameTh}):</span>
-                    <span class="text-stone-800 ml-1">${day.concept} — ผิว ${day.skinH} ชม. / เสื้อผ้า ${day.fabricH} ชม. (Phase A 32% + Carrier Phase B 68%)</span>
+                    <span class="text-stone-800 ml-1">${day.concept} — ผิว ${day.skinH} ชม. / เสื้อผ้า ${day.fabricH} ชม. (Fragrance Load ${currentConcPct}% + Citropol F 2% + Carrier Base)</span>
                 </div>
             `;
         }
 
-        // CALCULATOR LAB LOGIC WITH UPDATED CARRIER BASE FORMULA
+        // CALCULATOR LAB LOGIC WITH DYNAMIC CONCENTRATION % & CARRIER BASE
         function populateCalcSelect() {
             const select = document.getElementById('calcDaySelect');
             select.innerHTML = DAYS_DATA.map(d => `
@@ -991,56 +1015,88 @@
             calculateFormula();
         }
 
+        function setCalcConc(conc) {
+            document.getElementById('calcConcInput').value = conc;
+            document.getElementById('calcConcSlider').value = conc;
+            
+            // Highlight button preset
+            document.querySelectorAll('.btn-conc').forEach(btn => {
+                if (btn.innerText.trim() === `${conc}%`) {
+                    btn.className = 'btn-conc btn-3d py-2 text-xs bg-stone-900 border border-stone-900 rounded-xl text-amber-300 font-extrabold active:scale-95 shadow-depth-sm';
+                } else {
+                    btn.className = 'btn-conc btn-3d py-2 text-xs bg-white border border-stone-200 rounded-xl hover:bg-stone-50 font-extrabold text-stone-800 active:scale-95';
+                }
+            });
+
+            calculateFormula();
+        }
+
+        function onConcSliderChange(val) {
+            document.getElementById('calcConcInput').value = val;
+            calculateFormula();
+        }
+
         function calculateFormula() {
             const dayId = document.getElementById('calcDaySelect').value;
             const vol = parseFloat(document.getElementById('calcVolumeInput').value) || 50;
+            const concPct = parseFloat(document.getElementById('calcConcInput').value) || 30;
+
             const day = DAYS_DATA.find(d => d.id === dayId);
             if (!day) return;
 
-            // FORMULA MATH SPECIFICATIONS:
-            // Total Fragrance Load = 30% (Top 15%, Heart 12%, Musk 3%)
-            // Citropol F = 2% (Premixed with Fragrance Oil in Phase A) -> Phase A Total = 32%
-            // Carrier Base = 68% of total volume (Phase B)
-            // Carrier Ratio breakdown: DEB95 68%, DPG 30%, IPM 5% (Total carrier ratio parts = 103 parts)
+            // UPDATE CONCENTRATION DISPLAYS
+            document.getElementById('currentConcDisplay').innerText = `${concPct}%`;
+            document.getElementById('headerConcBadge').innerText = `⚗️ Fragrance Conc. ${concPct}%`;
 
-            const topOilMl = vol * 0.15;
-            const heartOilMl = vol * 0.12;
-            const muskOilMl = vol * 0.03;
-            const totalFragranceOil = topOilMl + heartOilMl + muskOilMl;
+            // DYNAMIC FORMULA MATH SPECIFICATIONS:
+            // Total Fragrance Load = concPct % (e.g. 30% -> Top 50% of oil load, Heart 40% of oil load, Musk 10% of oil load)
+            // Citropol F = 2% of total bottle volume (Fixed at 2%)
+            // Total Phase A Volume = (concPct % + 2%) of bottle
+            // Carrier Base Volume = Remainder of bottle = (100% - concPct% - 2%)
+            // Carrier ratio breakdown: DEB95 68%, DPG 30%, IPM 5% (Total carrier ratio parts = 103 parts)
+
+            const totalFragranceOil = vol * (concPct / 100);
+            
+            // Fragrance components breakdown (Top = 50% of fragrance oil, Heart = 40%, Base Musk = 10%)
+            const topOilMl = totalFragranceOil * 0.50;
+            const heartOilMl = totalFragranceOil * 0.40;
+            const muskOilMl = totalFragranceOil * 0.10;
 
             const citropolMl = vol * 0.02; // 2% Citropol F
             const phaseATotal = totalFragranceOil + citropolMl;
 
-            // Carrier Phase (68% of Total Bottle Volume)
-            const carrierVolTotal = vol * 0.68;
+            // Carrier Phase B Volume (Remaining % of Total Bottle Volume)
+            const carrierVolTotal = Math.max(0, vol - phaseATotal);
             
             // Carrier breakdown by user ratio: DEB95 68%, DPG 30%, IPM 5% (Ratio = 68/103, 30/103, 5/103)
             const deb95Ml = carrierVolTotal * (68 / 103);
             const dpgMl = carrierVolTotal * (30 / 103);
             const ipmMl = carrierVolTotal * (5 / 103);
 
+            // Update UI Output
             document.getElementById('calcResultTitle').innerText = `${day.icon} ${day.dayTh}: ${day.nameTh}`;
             document.getElementById('calcResultTotal').innerText = `ขวดขนาด: ${vol} ml`;
-            document.getElementById('calcTotalOil').innerText = `${totalFragranceOil.toFixed(2)} ml / g (30%)`;
+            document.getElementById('calcResultConcBadge').innerText = `Load ${concPct}%`;
+            document.getElementById('calcTotalOil').innerText = `${totalFragranceOil.toFixed(2)} ml / g (${concPct}%)`;
 
             document.getElementById('calcResultBody').innerHTML = `
                 <!-- PHASE A BLOCK -->
-                <div class="p-3 bg-amber-950/40 rounded-xl border border-amber-800/50 space-y-2">
+                <div class="p-3.5 bg-amber-950/40 rounded-xl border border-amber-800/50 space-y-2">
                     <div class="text-xs font-bold text-amber-300 flex justify-between items-center">
-                        <span>🧪 Phase A: หัวน้ำหอม + Citropol F (ผสมเข้ากันก่อน)</span>
+                        <span>🧪 Phase A: หัวน้ำหอม (${concPct}%) + Citropol F (2%)</span>
                         <span class="font-mono text-amber-200">${phaseATotal.toFixed(2)} ml</span>
                     </div>
                     <div class="space-y-1.5 pl-2 text-xs border-l-2 border-amber-600">
                         <div class="flex justify-between items-center text-stone-200">
-                            <span>🌿 Top Note (${day.top.name} 15%):</span>
+                            <span>🌿 Top Note (${day.top.name} - ${(concPct * 0.5).toFixed(1)}%):</span>
                             <span class="font-bold text-amber-300">${topOilMl.toFixed(2)} ml/g</span>
                         </div>
                         <div class="flex justify-between items-center text-stone-200">
-                            <span>🌸 Heart Note (${day.heart.name} 12%):</span>
+                            <span>🌸 Heart Note (${day.heart.name} - ${(concPct * 0.4).toFixed(1)}%):</span>
                             <span class="font-bold text-pink-300">${heartOilMl.toFixed(2)} ml/g</span>
                         </div>
                         <div class="flex justify-between items-center text-stone-200">
-                            <span>🌑 Base Note (Musk 100% 3%):</span>
+                            <span>🌑 Base Note (Musk 100% - ${(concPct * 0.1).toFixed(1)}%):</span>
                             <span class="font-bold text-purple-300">${muskOilMl.toFixed(2)} ml/g</span>
                         </div>
                         <div class="flex justify-between items-center text-emerald-300 pt-1 border-t border-amber-900/40 font-semibold">
@@ -1051,9 +1107,9 @@
                 </div>
 
                 <!-- PHASE B CARRIER BLOCK -->
-                <div class="p-3 bg-stone-900/60 rounded-xl border border-blue-900/50 space-y-2">
+                <div class="p-3.5 bg-stone-900/60 rounded-xl border border-blue-900/50 space-y-2">
                     <div class="text-xs font-bold text-blue-300 flex justify-between items-center">
-                        <span>🍾 Phase B: Carrier Base (68% ของสูตร)</span>
+                        <span>🍾 Phase B: Carrier Base (เติมส่วนที่เหลือ ${((carrierVolTotal / vol) * 100).toFixed(1)}%)</span>
                         <span class="font-mono text-blue-200">${carrierVolTotal.toFixed(2)} ml</span>
                     </div>
                     <div class="space-y-1.5 pl-2 text-xs border-l-2 border-blue-500">
@@ -1073,7 +1129,10 @@
                 </div>
             `;
 
-            document.getElementById('calcRatioNotice').innerText = `⏱️ *ผสม Phase A (32%) + Carrier Phase B (68%) ให้ได้รวม ${vol} ml พอดี ติดทนนานสูงสุด 24–36+ ชม.`;
+            document.getElementById('calcRatioNotice').innerText = `⏱️ *ผสม Phase A (${phaseATotal.toFixed(1)} ml) + Carrier Phase B (${carrierVolTotal.toFixed(1)} ml) ได้รวม ${vol} ml พอดี`;
+
+            // Refresh Day Card if currently visible to keep conc% synced
+            selectDay(currentDayId);
         }
 
         // COMPENDIUM DIRECTORY LOGIC
@@ -1087,7 +1146,7 @@
                     <div class="p-4 bg-stone-50 rounded-2xl border border-stone-200/90 search-item space-y-1.5 transition-all hover:border-stone-400 shadow-depth-sm">
                         <div class="flex justify-between items-center">
                             <span class="text-xs font-bold px-3 py-0.5 rounded-full text-white shadow-2xs" style="background-color: ${day.color}">
-                                ${day.icon} ${day.dayTh} · Top Note (15%)
+                                ${day.icon} ${day.dayTh} · Top Note
                             </span>
                             <span class="text-xs font-bold text-stone-800 bg-stone-200 px-2.5 py-0.5 rounded-md font-mono">Longevity ${day.top.longevity}/10</span>
                         </div>
@@ -1104,7 +1163,7 @@
                     <div class="p-4 bg-stone-50 rounded-2xl border border-stone-200/90 search-item space-y-1.5 transition-all hover:border-stone-400 shadow-depth-sm">
                         <div class="flex justify-between items-center">
                             <span class="text-xs font-bold px-3 py-0.5 rounded-full text-white bg-pink-600 shadow-2xs">
-                                ${day.icon} ${day.dayTh} · Heart Note (12%)
+                                ${day.icon} ${day.dayTh} · Heart Note
                             </span>
                             <span class="text-xs font-bold text-pink-950 bg-pink-100 px-2.5 py-0.5 rounded-md font-mono">Longevity ${day.heart.longevity}/10</span>
                         </div>
