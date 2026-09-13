@@ -162,9 +162,9 @@
 <body class="min-h-full flex flex-col justify-between pb-24 sm:pb-12">
 
     <!-- Mandatory Comment Placeholders -->
-    <!-- Chosen Palette: Modern Warm Luxury Ivory (#FAF8F5 background, #15060A dark plum cards, #E8B06A gold accents) with updated 30% Fragrance Concentration Extrait de Parfum System. -->
-    <!-- Application Structure Plan: Native mobile-first single page app structure updated for 30% fragrance oil formula load (Top 15% + Heart 12% + Musk 3%). Interactive tab views, radar chart, formula calculator, and 14 notes directory. -->
-    <!-- Visualization & Content Choices: 1. Chart.js Radar Chart for olfactive distribution. 2. Real-time batch formula lab math calculator with 30% fragrance oil load. 3. Dual longevity visualizer (Skin 12-16h / Fabric 24-36h+). 4. Searchable 14 notes directory. NO SVG or Mermaid JS used. -->
+    <!-- Chosen Palette: Modern Warm Luxury Ivory (#FAF8F5 background, #15060A dark plum cards, #E8B06A gold accents) with updated Carrier System (DEB95 68%, DPG 30%, IPM 5%) and Citropol F (2%) premix. -->
+    <!-- Application Structure Plan: Native mobile-first single page app with updated 2-Phase laboratory formulation system (Phase A: Fragrance Oil 30% + Citropol F 2% premix; Phase B: Carrier Base 68% composed of DEB95 68%, DPG 30%, IPM 5%). Interactive tab views, radar chart, lab calculator, and 14 notes compendium. -->
+    <!-- Visualization & Content Choices: 1. Chart.js Radar Chart for olfactive distribution. 2. Real-time batch formula lab calculator with Phase A & Phase B step-by-step breakdown. 3. Dual longevity visualizer (Skin 12-16h / Fabric 24-36h+). 4. Searchable 14 notes directory. NO SVG or Mermaid JS used. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <div class="w-full">
@@ -185,7 +185,7 @@
                             </span>
                         </div>
                         <p class="text-xs sm:text-sm text-stone-600 font-semibold mt-1">
-                            High Concentration 30% System · 14 โน้ต (0% Overlap)
+                            High Concentration 30% System · Carrier Formula Base
                         </p>
                     </div>
                 </div>
@@ -195,8 +195,8 @@
                     <span class="bg-amber-100/90 text-amber-950 border border-amber-300 px-3 py-1.5 rounded-xl shadow-depth-sm">
                         ⚗️ Extrait / EDP 30%
                     </span>
-                    <span class="bg-purple-100/90 text-purple-950 border border-purple-300 px-3 py-1.5 rounded-xl shadow-depth-sm">
-                        🌑 Musk 3%
+                    <span class="bg-blue-100/90 text-blue-950 border border-blue-300 px-3 py-1.5 rounded-xl shadow-depth-sm">
+                        🧪 Carrier: DEB95 68% + DPG 30% + IPM 5%
                     </span>
                     <span class="bg-emerald-100/90 text-emerald-950 border border-emerald-300 px-3 py-1.5 rounded-xl shadow-depth-sm">
                         👕 ติดทน 24–36 ชม.
@@ -211,7 +211,7 @@
                         ☀️ สูตร 7 วันเกิด
                     </button>
                     <button onclick="switchTab('view-formula-system', this)" class="tab-btn btn-3d px-4.5 py-2 rounded-2xl text-xs sm:text-sm font-bold whitespace-nowrap text-stone-700 hover:bg-stone-200/80 active:scale-95">
-                        🧪 ระบบสูตร 30%
+                        🧪 ระบบสูตร & Carrier
                     </button>
                     <button onclick="switchTab('view-radar', this)" class="tab-btn btn-3d px-4.5 py-2 rounded-2xl text-xs sm:text-sm font-bold whitespace-nowrap text-stone-700 hover:bg-stone-200/80 active:scale-95">
                         📊 กราฟมิติกลิ่น
@@ -234,15 +234,15 @@
                 <div class="absolute -right-4 -top-4 w-24 h-24 bg-amber-300/20 rounded-full blur-xl pointer-events-none"></div>
                 <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
                     <span class="text-xs sm:text-sm font-extrabold bg-gradient-to-r from-amber-200 to-amber-300 text-amber-950 border border-amber-400 px-3 py-1 rounded-full uppercase tracking-wide shadow-2xs">
-                        💡 ประสิทธิภาพความเข้มข้น 30% (Extrait / High EDP)
+                        💡 ขั้นตอนผสมมาตรฐาน (2-Phase Blending Method)
                     </span>
                     <span class="text-xs sm:text-sm font-mono font-extrabold text-amber-950 bg-white/80 px-3 py-0.5 rounded-lg border border-amber-300/60 shadow-2xs">
-                        Skin 12-16h · Fabric 24-36h+
+                        Fragrance 30% · Citropol F 2% · Carrier 68%
                     </span>
                 </div>
                 <p class="text-xs sm:text-sm text-amber-950 font-medium leading-relaxed mt-1">
-                    <b>หัวน้ำหอมเข้มข้นสูง 30%:</b> ผสมผสาน Top 15% + Heart 12% + Base Musk 3% ให้กลิ่นกระจายตัวฟุ้งสวยงาม <br class="hidden sm:inline">
-                    <b>ประสิทธิภาพความติดทน:</b> ติดทนบนผิวหนังนาน 12–16 ชม. และติดทนบนเสื้อผ้า/เส้นผมได้ยาวนานสูงสุด 24–36+ ชม.
+                    <b> Phase A (ผสมขั้นที่ 1):</b> นำ Citropol F 2% ผสมเข้ากับหัวน้ำหอม (30%) ให้เข้ากันเป็นเนื้อเดียวกันก่อน<br class="hidden sm:inline">
+                    <b> Phase B (ผสมขั้นที่ 2):</b> เตรียม Carrier Base สูตรเฉพาะ (DEB95 68% + DPG 30% + IPM 5%) แล้วนำ Phase A มาผสมรวมกับ Carrier
                 </p>
             </div>
 
@@ -255,7 +255,7 @@
                             <span>🗓️</span> เลือกระบุวันเกิดประจำสูตร
                         </h2>
                         <p class="text-xs sm:text-sm text-stone-600 font-medium mt-1">
-                            ความเข้มข้นหัวน้ำหอม 30% (Top 15% + Heart 12% + Musk 3% + Vanilla 1%)
+                            ความเข้มข้นหัวน้ำหอม 30% (Top 15% + Heart 12% + Base Musk 3%)
                         </p>
                     </div>
                     <span class="text-xs sm:text-sm bg-stone-100 text-stone-800 px-3.5 py-1.5 rounded-2xl font-bold border border-stone-200 shadow-2xs hidden sm:inline">
@@ -282,12 +282,12 @@
                     <div class="border-b border-amber-900/60 pb-4 flex justify-between items-start flex-wrap gap-3">
                         <div>
                             <span class="text-xs font-bold text-amber-400 tracking-wider uppercase bg-amber-950/90 px-3 py-1 rounded-full border border-amber-800/80 shadow-2xs">
-                                ⚗️ Master Formulation Spec (30% Load)
+                                ⚗️ Master Formulation Spec (30% Load + Carrier Base System)
                             </span>
-                            <h2 class="text-xl sm:text-2xl font-extrabold text-amber-100 mt-2.5">โครงสร้างระบบสูตรหัวน้ำหอม 30%</h2>
+                            <h2 class="text-xl sm:text-2xl font-extrabold text-amber-100 mt-2.5">โครงสร้างสูตรหัวน้ำหอม 30% และ Carrier Base</h2>
                         </div>
                         <span class="text-xs sm:text-sm bg-amber-500/20 text-amber-300 border border-amber-500/40 px-3.5 py-1.5 rounded-full font-mono font-bold shadow-2xs">
-                            Total Fragrance 30%
+                            Fragrance 30% + Carrier 68%
                         </span>
                     </div>
 
@@ -298,50 +298,49 @@
                             <div class="text-amber-200/80 text-xs mt-1.5 leading-relaxed">สัดส่วนหัวน้ำหอมเข้มข้นระดับ Extrait/EDP กลิ่นแน่นติดทนนานข้ามวัน</div>
                         </div>
 
-                        <div class="bg-[#2A1018] p-4.5 rounded-2xl border border-purple-900/50 shadow-depth-sm transition-transform hover:scale-[1.02]">
-                            <div class="text-purple-300 font-bold mb-1 text-xs">Musk 100% (3%)</div>
-                            <div class="text-white text-base font-extrabold">Pre-dilute 1:1 DPG</div>
-                            <div class="text-purple-200/80 text-xs mt-1.5 leading-relaxed">Skin base note ยึดเกาะชั้นผิวสูงสุด ปริมาณ 3% ในทุกสูตร</div>
-                        </div>
-
-                        <div class="bg-[#2A1018] p-4.5 rounded-2xl border border-amber-900/50 shadow-depth-sm transition-transform hover:scale-[1.02]">
-                            <div class="text-amber-400 font-bold mb-1 text-xs">Vanilla Extract 20X (1%)</div>
-                            <div class="text-white text-base font-extrabold">Fragrance Fixative</div>
-                            <div class="text-amber-200/80 text-xs mt-1.5 leading-relaxed">ตัวเสริมความติดทน นุ่มลึก ละมุน ไม่กลบกลิ่นหลัก</div>
-                        </div>
-
                         <div class="bg-[#2A1018] p-4.5 rounded-2xl border border-emerald-900/50 shadow-depth-sm transition-transform hover:scale-[1.02]">
                             <div class="text-emerald-400 font-bold mb-1 text-xs">Citropol F (2%)</div>
                             <div class="text-white text-base font-extrabold">Top Note Lock Complex</div>
-                            <div class="text-emerald-200/80 text-xs mt-1.5 leading-relaxed">ช่วยล็อกกลิ่นส้มและผลไม้ให้อยู่นานขึ้น 2–4 เท่า</div>
-                        </div>
-
-                        <div class="bg-[#2A1018] p-4.5 rounded-2xl border border-stone-700/60 shadow-depth-sm transition-transform hover:scale-[1.02]">
-                            <div class="text-stone-300 font-bold mb-1 text-xs">DEB95 Ethanol (67%)</div>
-                            <div class="text-white text-base font-extrabold">Denatured Ethanol 95%</div>
-                            <div class="text-stone-300/80 text-xs mt-1.5 leading-relaxed">ตัวพาความหอมฟุ้งกระจาย ปลอดภัย ละมุนนุ่มนวล</div>
+                            <div class="text-emerald-200/80 text-xs mt-1.5 leading-relaxed"><b>*ต้องผสมเข้ากับหัวน้ำหอม 30% (Phase A) ก่อน</b> เพื่อล็อกกลิ่นผลไม้และส้มให้อยู่นานขึ้น</div>
                         </div>
 
                         <div class="bg-[#2A1018] p-4.5 rounded-2xl border border-blue-900/50 shadow-depth-sm transition-transform hover:scale-[1.02]">
-                            <div class="text-blue-300 font-bold mb-1 text-xs">Total Blend Ratio</div>
-                            <div class="text-white text-base font-extrabold">30% Oil + 70% Base</div>
-                            <div class="text-blue-200/80 text-xs mt-1.5 leading-relaxed">ความสมดุลระดับพรีเมียม กลิ่นไม่ฉุนบาดจมูก</div>
+                            <div class="text-blue-300 font-bold mb-1 text-xs">DEB95 Ethanol (68% ใน Carrier)</div>
+                            <div class="text-white text-base font-extrabold">Denatured Alcohol 95%</div>
+                            <div class="text-blue-200/80 text-xs mt-1.5 leading-relaxed">ตัวพาความหอมกระจายตัวโปร่งเบา สะอาดและปลอดภัย</div>
+                        </div>
+
+                        <div class="bg-[#2A1018] p-4.5 rounded-2xl border border-purple-900/50 shadow-depth-sm transition-transform hover:scale-[1.02]">
+                            <div class="text-purple-300 font-bold mb-1 text-xs">DPG - Dipropylene Glycol (30% ใน Carrier)</div>
+                            <div class="text-white text-base font-extrabold">Fragrance Fixative & Solvent</div>
+                            <div class="text-purple-200/80 text-xs mt-1.5 leading-relaxed">ช่วยหน่วงการระเหย ชะลอกลิ่นให้ติดทนนานบนผิวและเสื้อผ้า</div>
+                        </div>
+
+                        <div class="bg-[#2A1018] p-4.5 rounded-2xl border border-orange-900/50 shadow-depth-sm transition-transform hover:scale-[1.02]">
+                            <div class="text-orange-300 font-bold mb-1 text-xs">IPM - Isopropyl Myristate (5% ใน Carrier)</div>
+                            <div class="text-white text-base font-extrabold">Skin Penetration Enhancer</div>
+                            <div class="text-orange-200/80 text-xs mt-1.5 leading-relaxed">ช่วยให้น้ำหอมซึมยึดเกาะผิว นุ่มนวล ไม่เหนียวเหนอะหนะ</div>
+                        </div>
+
+                        <div class="bg-[#2A1018] p-4.5 rounded-2xl border border-stone-700/60 shadow-depth-sm transition-transform hover:scale-[1.02]">
+                            <div class="text-stone-300 font-bold mb-1 text-xs">Carrier Base Standard Ratio</div>
+                            <div class="text-white text-base font-extrabold">DEB95 68% : DPG 30% : IPM 5%</div>
+                            <div class="text-stone-300/80 text-xs mt-1.5 leading-relaxed">อัตราส่วน Carrier เบสเฉพาะ ปรับปรุงตามสูตรห้องแล็บล่าสุด</div>
                         </div>
                     </div>
 
                     <!-- Summary Formula Visualizer -->
                     <div class="p-5 bg-[#250D15] rounded-2xl border border-amber-900/60 space-y-3 shadow-inner">
                         <div class="flex justify-between items-center text-xs sm:text-sm font-bold text-amber-300 flex-wrap gap-2">
-                            <span>องค์ประกอบใน 1 ขวด (100%)</span>
-                            <span class="text-amber-200 font-mono bg-amber-950/80 px-3 py-1 rounded-lg border border-amber-800/60">หัวน้ำหอม 30% + ตัวทำละลายและสารล็อก 70%</span>
+                            <span>ขั้นตอนการผสมในห้องแล็บ (Step-by-Step)</span>
+                            <span class="text-amber-200 font-mono bg-amber-950/80 px-3 py-1 rounded-lg border border-amber-800/60">Phase A (Fragrance+Citropol) ➔ Phase B (Carrier Base)</span>
                         </div>
                         <div class="h-6 w-full rounded-full overflow-hidden flex bg-stone-900 text-xs font-extrabold shadow-inner p-0.5 border border-amber-900/40">
-                            <div style="width: 15%;" class="bg-amber-500 text-stone-900 flex items-center justify-center rounded-l-full" title="Top Note 15%">15%</div>
-                            <div style="width: 12%;" class="bg-pink-600 text-white flex items-center justify-center" title="Heart Note 12%">12%</div>
-                            <div style="width: 3%;" class="bg-purple-600 text-white flex items-center justify-center" title="Musk 3%">3%</div>
-                            <div style="width: 1%;" class="bg-yellow-400 text-stone-900 flex items-center justify-center" title="Vanilla 1%">1%</div>
-                            <div style="width: 2%;" class="bg-emerald-500 text-stone-900 flex items-center justify-center" title="Citropol 2%">2%</div>
-                            <div style="width: 67%;" class="bg-stone-700 text-stone-200 flex items-center justify-center rounded-r-full">DEB95 Alcohol 67%</div>
+                            <div style="width: 15%;" class="bg-amber-500 text-stone-900 flex items-center justify-center rounded-l-full" title="Top Note 15%">Top 15%</div>
+                            <div style="width: 12%;" class="bg-pink-600 text-white flex items-center justify-center" title="Heart Note 12%">Heart 12%</div>
+                            <div style="width: 3%;" class="bg-purple-600 text-white flex items-center justify-center" title="Musk 3%">Musk 3%</div>
+                            <div style="width: 2%;" class="bg-emerald-500 text-stone-900 flex items-center justify-center" title="Citropol 2%">Citropol 2%</div>
+                            <div style="width: 68%;" class="bg-blue-700 text-white flex items-center justify-center rounded-r-full">Carrier Base (DEB95 68% + DPG 30% + IPM 5%)</div>
                         </div>
                     </div>
                 </div>
@@ -379,9 +378,9 @@
                         <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-950 bg-emerald-100 border border-emerald-300 px-3.5 py-1 rounded-full shadow-2xs">
                             Perfumer's Lab Calculator
                         </span>
-                        <h2 class="text-lg sm:text-2xl font-extrabold text-stone-900 mt-2.5">เครื่องคิดเลขตวงสูตรผสม (หัวน้ำหอม 30%)</h2>
+                        <h2 class="text-lg sm:text-2xl font-extrabold text-stone-900 mt-2.5">เครื่องคิดเลขตวงสูตรผสม (30% Load + Carrier System)</h2>
                         <p class="text-xs sm:text-sm text-stone-600 font-medium mt-1 leading-relaxed">
-                            คำนวณปริมาณ ml / g สำหรับ Top (15%), Heart (12%), Musk (3%), Vanilla 20X (1%), Citropol F (2%) และ DEB95 Alcohol ให้อัตโนมัติ
+                            คำนวณปริมาณ ml / g แยกตาม <b>Phase A (หัวน้ำหอม + Citropol F)</b> และ <b>Phase B (Carrier Base: DEB95 68%, DPG 30%, IPM 5%)</b> ให้อัตโนมัติตามขนาดขวดที่ระบุ
                         </p>
                     </div>
 
@@ -405,6 +404,18 @@
                                 </div>
                                 <input type="number" id="calcVolumeInput" value="50" oninput="calculateFormula()" class="w-full bg-white border border-stone-300 rounded-2xl px-4 py-3 text-xs sm:text-sm font-bold focus:outline-none focus:ring-2 focus:ring-stone-800 transition-all shadow-depth-sm" placeholder="หรือกรอกขนาดระบุเอง (ml)...">
                             </div>
+
+                            <!-- Guide Box -->
+                            <div class="p-3.5 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-950 space-y-1">
+                                <div class="font-bold flex items-center gap-1.5 text-amber-900">
+                                    <span>🧪</span> ข้อแนะนำขั้นตอนการตวงในห้องแล็บ:
+                                </div>
+                                <p class="leading-relaxed font-medium">
+                                    1. ผสม <b>Citropol F (2%)</b> เข้ากับหัวน้ำหอม Top + Heart + Musk รวมเป็น <b>Phase A</b> คนให้เข้ากันก่อน<br>
+                                    2. ผสมตัวทำละลาย Carrier (DEB95 + DPG + IPM) เป็น <b>Phase B</b><br>
+                                    3. นำ Phase A ค่อยๆ เทผสมลงใน Phase B แล้วคน/เขย่าให้ใสเป็นเนื้อเดียวกัน
+                                </p>
+                            </div>
                         </div>
 
                         <!-- Calculation Output Card with 3D Dark Glow -->
@@ -426,7 +437,7 @@
                                     <span class="text-amber-300 font-extrabold text-base sm:text-lg" id="calcTotalOil">15.00 ml / g</span>
                                 </div>
                                 <p class="text-xs text-emerald-300 font-semibold mt-1" id="calcRatioNotice">
-                                    ⏱️ *คำนวณตามสูตร High Concentration 30% System เพื่อการติดทนสูงสุดบนผิว 12–16 ชม. / บนผ้า 24–36+ ชม.
+                                    ⏱️ *คำนวณตามสูตร High Concentration 30% System + Carrier Base Standard
                                 </p>
                             </div>
                         </div>
@@ -471,7 +482,7 @@
             </button>
             <button onclick="switchTab('view-formula-system', this)" class="mobile-tab-btn flex flex-col items-center py-1 px-2 text-stone-400 transition-transform active:scale-90">
                 <span class="text-lg mb-0.5">🧪</span>
-                <span class="text-[11px]">ระบบสูตร 30%</span>
+                <span class="text-[11px]">สูตร & Carrier</span>
             </button>
             <button onclick="switchTab('view-radar', this)" class="mobile-tab-btn flex flex-col items-center py-1 px-2 text-stone-400 transition-transform active:scale-90">
                 <span class="text-lg mb-0.5">📊</span>
@@ -492,7 +503,7 @@
     <footer class="bg-white/80 border-t border-stone-200/80 py-5 px-4 text-center text-xs sm:text-sm text-stone-600 mt-10">
         <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
             <span class="font-bold">🌸 ละมุน บาย LKN — 7-Day Birthday Perfume Collection (30% Fragrance System)</span>
-            <span class="text-xs text-stone-500 font-medium">สูตร Extrait / EDP 30% + Musk 3% + Vanilla 1% ติดทน 24+ ชั่วโมง</span>
+            <span class="text-xs text-stone-500 font-medium">สูตร Carrier Base: DEB95 (68%) + DPG (30%) + IPM (5%) + Citropol F (2%)</span>
         </div>
     </footer>
 
@@ -510,7 +521,7 @@
                 bgColor: '#FFF3DC',
                 nameTh: 'แสงทอง',
                 concept: 'Sparkling Fruity · Warm Honey Gourmand',
-                desc: 'แชมเปญโทสเปิดฟู่หวานประกาย → Honey Bee ให้ความอบอุ่นนุ่มลึกยาวนาน → Musk + Vanilla ปิดท้ายติดผิวข้ามวัน กลิ่นออร่าเปล่งประกาย มั่นใจ',
+                desc: 'แชมเปญโทสเปิดฟู่หวานประกาย → Honey Bee ให้ความอบอุ่นนุ่มลึกยาวนาน → Base Musk ปิดท้ายติดผิวข้ามวัน กลิ่นออร่าเปล่งประกาย มั่นใจ',
                 skinH: 14,
                 fabricH: 30,
                 mood: 'มั่นใจ สว่างใส',
@@ -519,7 +530,6 @@
                 top: { name: 'Champagne Toast', pct: 15, family: 'Sparkling Fruity / Citrus Fizz', longevity: 4, booklet: 'เข้ากับ Kyoho Grape, Charming, Freesia' },
                 heart: { name: 'Honey Bee', pct: 12, family: 'Warm Honey / Gourmand Fixative', longevity: 8, booklet: 'เข้ากับ Apple, Ginger, Tea Rose, White Tea' },
                 baseMusk: 3,
-                vanillaFix: 1,
                 scores: [30, 20, 85, 40, 95, 60]
             },
             {
@@ -532,7 +542,7 @@
                 bgColor: '#EBF3FF',
                 nameTh: 'จันทร์เจ้า',
                 concept: 'Powdery Soft Floral · Exotic White Floral Thai',
-                desc: 'ซากุระนุ่มเปิดกลิ่นเบา → Michelia ดอกจำปีไทยหอมอวลลึก Exotic Oriental → Musk ปิดด้วยความบริสุทธิ์ กลิ่นดอกไม้ไทยยามค่ำ มีเอกลักษณ์',
+                desc: 'ซากุระนุ่มเปิดกลิ่นเบา → Michelia ดอกจำปีไทยหอมอวลลึก Exotic Oriental → Base Musk ปิดด้วยความบริสุทธิ์ กลิ่นดอกไม้ไทยยามค่ำ มีเอกลักษณ์',
                 skinH: 14,
                 fabricH: 28,
                 mood: 'ลึกลับ Exotic',
@@ -541,7 +551,6 @@
                 top: { name: 'Classic Sakura', pct: 15, family: 'Powdery Soft Floral', longevity: 6, booklet: 'เข้ากับ Milk, Vanilla Extract, Freesia' },
                 heart: { name: 'Michelia (ดอกจำปี)', pct: 12, family: 'Exotic White Floral', longevity: 7, booklet: 'เข้ากับ Royal Lotus, Pandan, Vanilla, White Tea' },
                 baseMusk: 3,
-                vanillaFix: 1,
                 scores: [15, 85, 30, 90, 20, 50]
             },
             {
@@ -554,7 +563,7 @@
                 bgColor: '#FDEAEA',
                 nameTh: 'ไฟแดง',
                 concept: 'Juicy Dark Grape · Chypre Fruity-Floral Seductive',
-                desc: 'Kyoho Grape เปิดหวานลึกสุกงอม → Charming GP1107J เป็นหัวใจ Chypre เย้ายวนดึงดูด → Musk เสริมความ seductive ระดับ counter brand',
+                desc: 'Kyoho Grape เปิดหวานลึกสุกงอม → Charming GP1107J เป็นหัวใจ Chypre เย้ายวนดึงดูด → Base Musk เสริมความ seductive ระดับ counter brand',
                 skinH: 15,
                 fabricH: 32,
                 mood: 'มีพลัง เย้ายวน',
@@ -563,7 +572,6 @@
                 top: { name: 'Kyoho Grape', pct: 15, family: 'Juicy Dark Grape / Fruity', longevity: 5, booklet: 'เข้ากับ Champagne Toast, Velvet Sugar, Milk' },
                 heart: { name: 'Charming GP1107J', pct: 12, family: 'Chypre Fruity-Floral / Seductive', longevity: 9, booklet: 'เข้ากับ Champagne Toast, Kyoho Grape, Freesia, Woody Sage' },
                 baseMusk: 3,
-                vanillaFix: 1,
                 scores: [20, 20, 95, 80, 40, 75]
             },
             {
@@ -576,7 +584,7 @@
                 bgColor: '#E8F7EE',
                 nameTh: 'เขียวขจี',
                 concept: 'Crisp Green Apple · Sweet Cupcake Powdery',
-                desc: 'Green Apple คมชัดเปรี้ยวสด → Velvet Sugar หวานนุ่มกำมะหยี่ → Musk ปิดด้วยความนุ่ม กลิ่นสดชื่นแต่มีความหวานลึก ไม่แห้งเกินไป',
+                desc: 'Green Apple คมชัดเปรี้ยวสด → Velvet Sugar หวานนุ่มกำมะหยี่ → Base Musk ปิดด้วยความนุ่ม กลิ่นสดชื่นแต่มีความหวานลึก ไม่แห้งเกินไป',
                 skinH: 12,
                 fabricH: 26,
                 mood: 'สดชื่น หวานนุ่ม',
@@ -585,7 +593,6 @@
                 top: { name: 'Green Apple', pct: 15, family: 'Crisp Tart Fruity', longevity: 3, booklet: 'เข้ากับ Cantaloup, Blooming Bouquet, Freesia, Velvet Sugar' },
                 heart: { name: 'Velvet Sugar', pct: 12, family: 'Sweet Sugary Cupcake / Fruity', longevity: 7, booklet: 'เข้ากับ Blooming Bouquet, Kyoho Grape, Vanilla' },
                 baseMusk: 3,
-                vanillaFix: 1,
                 scores: [40, 60, 85, 65, 50, 30]
             },
             {
@@ -598,7 +605,7 @@
                 bgColor: '#F0EBFF',
                 nameTh: 'ทองพฤหัส',
                 concept: 'Fruity Floral Chypre · Amber Oriental Luxe',
-                desc: 'English Pear & Flower เปิดหรูหราสะอาด Chypre → Madame Coco ครอบด้วย Oriental Spicy ลึกลับ → Musk ปิดด้วย sensual อบอุ่น',
+                desc: 'English Pear & Flower เปิดหรูหราสะอาด Chypre → Madame Coco ครอบด้วย Oriental Spicy ลึกลับ → Base Musk ปิดด้วย sensual อบอุ่น',
                 skinH: 16,
                 fabricH: 36,
                 mood: 'หรูหรา Oriental',
@@ -607,7 +614,6 @@
                 top: { name: 'English Pear & Flower', pct: 15, family: 'Fruity Floral Chypre (Jo Malone Vibe)', longevity: 7, booklet: 'เข้ากับ Woody Sage, White Tea, Tea Rose, Madame Coco' },
                 heart: { name: 'Madame Coco', pct: 12, family: 'Amber Oriental / Warm Spicy (Chanel Vibe)', longevity: 10, booklet: 'เข้ากับ Tea Rose, Vanilla Extract, English Pear' },
                 baseMusk: 3,
-                vanillaFix: 1,
                 scores: [20, 30, 75, 70, 60, 95]
             },
             {
@@ -620,7 +626,7 @@
                 bgColor: '#FDEAF3',
                 nameTh: 'ลมหวาน',
                 concept: 'Soft Floral Pink Petals · Lactonic Creamy Feminine',
-                desc: 'Blooming Bouquet ดอกพีโอนีและกุหลาบชมพูอ่อนหวาน → Milk นมสดครีมมี่ Lactonic เพิ่มมิติ → Musk ปิดด้วยความนุ่มนวล กลิ่น Dior-inspired ที่ครีมมี่กว่าต้นฉบับ',
+                desc: 'Blooming Bouquet ดอกพีโอนีและกุหลาบชมพูอ่อนหวาน → Milk นมสดครีมมี่ Lactonic เพิ่มมิติ → Base Musk ปิดด้วยความนุ่มนวล กลิ่น Dior-inspired ที่ครีมมี่กว่าต้นฉบับ',
                 skinH: 14,
                 fabricH: 28,
                 mood: 'โรแมนติก ครีมมี่',
@@ -629,7 +635,6 @@
                 top: { name: 'Blooming Bouquet', pct: 15, family: 'Soft Floral / Pink Petals (Dior Vibe)', longevity: 6, booklet: 'เข้ากับ Green Apple, Velvet Sugar, Freesia' },
                 heart: { name: 'Milk', pct: 12, family: 'Lactonic / Creamy Sweet', longevity: 7, booklet: 'เข้ากับ Mango, Cocoa, Sakura, Pandan' },
                 baseMusk: 3,
-                vanillaFix: 1,
                 scores: [15, 20, 60, 95, 75, 40]
             },
             {
@@ -642,7 +647,7 @@
                 bgColor: '#EEEEF4',
                 nameTh: 'ราตรี',
                 concept: 'Tangy Red Berry · Dark Chocolate Gourmand',
-                desc: 'Goji Berry เปิดด้วยเบอร์รี่แดงสดเปรี้ยวซ่า → Chocolate ครอบด้วยดาร์กช็อกโกแลตอบอุ่นลึก → Musk ปิดด้วย sensual ลึก กลิ่น dark gourmand ที่สดกว่า Madame Coco แต่ยังคง sexy',
+                desc: 'Goji Berry เปิดด้วยเบอร์รี่แดงสดเปรี้ยวซ่า → Chocolate ครอบด้วยดาร์กช็อกโกแลตอบอุ่นลึก → Base Musk ปิดด้วย sensual ลึก กลิ่น dark gourmand ที่สดกว่า Madame Coco แต่ยังคง sexy',
                 skinH: 15,
                 fabricH: 34,
                 mood: 'ลึกลับ Seductive',
@@ -651,7 +656,6 @@
                 top: { name: 'Goji Berry', pct: 15, family: 'Tangy Red Berry / Fruity', longevity: 4, booklet: 'เข้ากับ Blooming Bouquet, Vanilla Extract, Apple' },
                 heart: { name: 'Chocolate', pct: 12, family: 'Dark Gourmand (Heart to Base)', longevity: 9, booklet: 'เข้ากับ Milk, Vanilla Extract, Kyoho Grape, Ginger' },
                 baseMusk: 3,
-                vanillaFix: 1,
                 scores: [10, 10, 80, 40, 95, 90]
             }
         ];
@@ -785,7 +789,7 @@
                 <!-- FRAGRANCE PYRAMID BREAKDOWN -->
                 <div class="space-y-4 pt-1">
                     <h4 class="text-xs sm:text-sm font-extrabold text-stone-900 uppercase tracking-wider flex items-center gap-2">
-                        <span>🧪</span> Fragrance Pyramid (หัวน้ำหอมรวม 30% + Fixative 1%)
+                        <span>🧪</span> Fragrance Pyramid (หัวน้ำหอมรวม 30% + Citropol F 2%)
                     </h4>
 
                     <div class="space-y-3 text-xs sm:text-sm">
@@ -837,35 +841,32 @@
                             </div>
                         </div>
 
-                        <!-- Vanilla Fixative -->
-                        <div class="p-4 rounded-2xl border border-amber-200 bg-amber-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-depth-sm transition-all hover:bg-amber-50/80">
+                        <!-- Citropol F Premix -->
+                        <div class="p-4 rounded-2xl border border-emerald-200 bg-emerald-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-depth-sm transition-all hover:bg-emerald-50/80">
                             <div class="space-y-1">
                                 <div class="flex items-center gap-2 flex-wrap">
-                                    <span class="w-3.5 h-3.5 rounded-full bg-amber-600 flex-shrink-0 shadow-2xs"></span>
-                                    <span class="font-extrabold text-amber-950 uppercase">✨ Fixative — Vanilla Extract 20X (1%)</span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-emerald-600 flex-shrink-0 shadow-2xs"></span>
+                                    <span class="font-extrabold text-emerald-950 uppercase">🛡️ Citropol F (2% - ผสมเข้ากับหัวน้ำหอมก่อน)</span>
                                 </div>
-                                <div class="font-extrabold text-amber-950 text-base sm:text-lg ml-5.5">Vanilla Extract 20X</div>
-                                <div class="text-amber-900 font-medium ml-5.5 text-xs sm:text-sm">Fragrance Enhancer — เสริมความติดทน ไม่นับเป็น Note หลัก</div>
+                                <div class="font-extrabold text-emerald-950 text-base sm:text-lg ml-5.5">Citropol F (Top Lock Complex)</div>
+                                <div class="text-emerald-900 font-medium ml-5.5 text-xs sm:text-sm"><b>*ผสมกับ Phase A ก่อน:</b> ล็อกกลิ่นผลไม้/ส้มให้อยู่ทนนานขึ้น 2–4 เท่า</div>
                             </div>
-                            <div class="text-xs sm:text-sm bg-amber-100 text-amber-950 border border-amber-300 p-2.5 rounded-xl font-bold sm:max-w-xs shadow-2xs">
-                                🍯 เพิ่มมิติความนุ่มลึกของน้ำหอม
+                            <div class="text-xs sm:text-sm bg-emerald-100 text-emerald-950 border border-emerald-300 p-2.5 rounded-xl font-bold sm:max-w-xs shadow-2xs">
+                                ⚗️ Phase A Mix Ready
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- SPLIT RATIO BAR -->
-                <div class="space-y-2 pt-2 border-t border-stone-200">
-                    <div class="flex justify-between text-xs sm:text-sm font-extrabold text-stone-700 flex-wrap gap-2">
-                        <span>สัดส่วน Fragrance Load (${day.dayTh})</span>
-                        <span>Top 15% : Heart 12% : Musk 3% : Vanilla 1%</span>
+                <!-- CARRIER BASE SUMMARY BLOCK -->
+                <div class="p-4 rounded-2xl bg-blue-50/80 border border-blue-200 space-y-2 shadow-inner">
+                    <div class="flex justify-between items-center text-xs sm:text-sm font-extrabold text-blue-950">
+                        <span>🧪 สูตร Carrier Base ของคุณ (68% ของทั้งขวด):</span>
+                        <span class="bg-blue-200 text-blue-950 px-3 py-0.5 rounded-full">DEB95 68% · DPG 30% · IPM 5%</span>
                     </div>
-                    <div class="h-4.5 w-full rounded-full overflow-hidden flex bg-stone-200 text-xs font-bold text-white shadow-inner border border-stone-300/80 p-0.5">
-                        <div style="width: 48%; background-color: ${day.color}" class="flex items-center justify-center rounded-l-full" title="Top 15%">Top 15%</div>
-                        <div style="width: 39%; background-color: #DB2777" class="flex items-center justify-center" title="Heart 12%">Heart 12%</div>
-                        <div style="width: 10%; background-color: #6B21A8" class="flex items-center justify-center" title="Musk 3%">Musk 3%</div>
-                        <div style="width: 3%; background-color: #D97706" class="flex items-center justify-center rounded-r-full" title="V1%">V1%</div>
-                    </div>
+                    <p class="text-xs text-blue-900 font-medium leading-relaxed">
+                        ผสมสารทำละลาย Carrier ทั้งสามชนิดให้ละลายเข้ากันเป็น <b>Phase B</b> จากนั้นนำ Phase A (หัวน้ำหอม 30% + Citropol F 2%) ที่เตรียมไว้ล่วงหน้า เทผสมรวมลงไป บ่มพักกลิ่นก่อนบรรจุขวด
+                    </p>
                 </div>
 
                 <!-- LONGEVITY ESTIMATION METER WITH ENHANCED HEIGHT & SHADOW -->
@@ -972,12 +973,12 @@
             el.innerHTML = `
                 <div class="p-4 rounded-2xl bg-stone-100/90 border border-stone-200/90 shadow-inner font-medium">
                     <span class="font-extrabold" style="color: ${day.color}">${day.icon} ${day.dayTh} (${day.nameTh}):</span>
-                    <span class="text-stone-800 ml-1">${day.concept} — ผิว ${day.skinH} ชม. / เสื้อผ้า ${day.fabricH} ชม. (Top 15% + Heart 12% + Musk 3% + Vanilla 1%)</span>
+                    <span class="text-stone-800 ml-1">${day.concept} — ผิว ${day.skinH} ชม. / เสื้อผ้า ${day.fabricH} ชม. (Phase A 32% + Carrier Phase B 68%)</span>
                 </div>
             `;
         }
 
-        // CALCULATOR LAB LOGIC
+        // CALCULATOR LAB LOGIC WITH UPDATED CARRIER BASE FORMULA
         function populateCalcSelect() {
             const select = document.getElementById('calcDaySelect');
             select.innerHTML = DAYS_DATA.map(d => `
@@ -996,52 +997,83 @@
             const day = DAYS_DATA.find(d => d.id === dayId);
             if (!day) return;
 
-            // FORMULA MATH (30% Fragrance Load System):
-            // Fragrance Load (30% Total): Top 15%, Heart 12%, Musk 3%
-            // Fixative: Vanilla Extract 20X (1%)
-            // Solvents & Boosters: Citropol F (2%), DEB95 Alcohol (67%)
+            // FORMULA MATH SPECIFICATIONS:
+            // Total Fragrance Load = 30% (Top 15%, Heart 12%, Musk 3%)
+            // Citropol F = 2% (Premixed with Fragrance Oil in Phase A) -> Phase A Total = 32%
+            // Carrier Base = 68% of total volume (Phase B)
+            // Carrier Ratio breakdown: DEB95 68%, DPG 30%, IPM 5% (Total carrier ratio parts = 103 parts)
 
             const topOilMl = vol * 0.15;
             const heartOilMl = vol * 0.12;
             const muskOilMl = vol * 0.03;
-            const vanillaFixMl = vol * 0.01;
-            const citropolMl = vol * 0.02;
-            const deb95Ml = vol * 0.67;
-
             const totalFragranceOil = topOilMl + heartOilMl + muskOilMl;
+
+            const citropolMl = vol * 0.02; // 2% Citropol F
+            const phaseATotal = totalFragranceOil + citropolMl;
+
+            // Carrier Phase (68% of Total Bottle Volume)
+            const carrierVolTotal = vol * 0.68;
+            
+            // Carrier breakdown by user ratio: DEB95 68%, DPG 30%, IPM 5% (Ratio = 68/103, 30/103, 5/103)
+            const deb95Ml = carrierVolTotal * (68 / 103);
+            const dpgMl = carrierVolTotal * (30 / 103);
+            const ipmMl = carrierVolTotal * (5 / 103);
 
             document.getElementById('calcResultTitle').innerText = `${day.icon} ${day.dayTh}: ${day.nameTh}`;
             document.getElementById('calcResultTotal').innerText = `ขวดขนาด: ${vol} ml`;
             document.getElementById('calcTotalOil').innerText = `${totalFragranceOil.toFixed(2)} ml / g (30%)`;
 
             document.getElementById('calcResultBody').innerHTML = `
-                <div class="flex justify-between items-center">
-                    <span class="text-amber-200/90">🌿 Top Note (${day.top.name} 15%):</span>
-                    <span class="font-bold text-amber-300 text-sm sm:text-base">${topOilMl.toFixed(2)} ml / g</span>
+                <!-- PHASE A BLOCK -->
+                <div class="p-3 bg-amber-950/40 rounded-xl border border-amber-800/50 space-y-2">
+                    <div class="text-xs font-bold text-amber-300 flex justify-between items-center">
+                        <span>🧪 Phase A: หัวน้ำหอม + Citropol F (ผสมเข้ากันก่อน)</span>
+                        <span class="font-mono text-amber-200">${phaseATotal.toFixed(2)} ml</span>
+                    </div>
+                    <div class="space-y-1.5 pl-2 text-xs border-l-2 border-amber-600">
+                        <div class="flex justify-between items-center text-stone-200">
+                            <span>🌿 Top Note (${day.top.name} 15%):</span>
+                            <span class="font-bold text-amber-300">${topOilMl.toFixed(2)} ml/g</span>
+                        </div>
+                        <div class="flex justify-between items-center text-stone-200">
+                            <span>🌸 Heart Note (${day.heart.name} 12%):</span>
+                            <span class="font-bold text-pink-300">${heartOilMl.toFixed(2)} ml/g</span>
+                        </div>
+                        <div class="flex justify-between items-center text-stone-200">
+                            <span>🌑 Base Note (Musk 100% 3%):</span>
+                            <span class="font-bold text-purple-300">${muskOilMl.toFixed(2)} ml/g</span>
+                        </div>
+                        <div class="flex justify-between items-center text-emerald-300 pt-1 border-t border-amber-900/40 font-semibold">
+                            <span>🛡️ Citropol F (Top Lock 2%):</span>
+                            <span class="font-bold text-emerald-400">${citropolMl.toFixed(2)} ml/g</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex justify-between items-center">
-                    <span class="text-amber-200/90">🌸 Heart Note (${day.heart.name} 12%):</span>
-                    <span class="font-bold text-pink-300 text-sm sm:text-base">${heartOilMl.toFixed(2)} ml / g</span>
-                </div>
-                <div class="flex justify-between items-center">
-                    <span class="text-amber-200/90">🌑 Base Note (Musk 100% 3%):</span>
-                    <span class="font-bold text-purple-300 text-sm sm:text-base">${muskOilMl.toFixed(2)} ml / g</span>
-                </div>
-                <div class="flex justify-between items-center pt-2.5 border-t border-amber-900/50">
-                    <span class="text-amber-200/80">✨ Fixative (Vanilla Extract 20X 1%):</span>
-                    <span class="font-bold text-amber-400 text-sm sm:text-base">${vanillaFixMl.toFixed(2)} ml / g</span>
-                </div>
-                <div class="flex justify-between items-center">
-                    <span class="text-amber-200/80">🛡️ Citropol F (Top Lock 2%):</span>
-                    <span class="font-bold text-emerald-400 text-sm sm:text-base">${citropolMl.toFixed(2)} ml / g</span>
-                </div>
-                <div class="flex justify-between items-center pt-2.5 border-t border-amber-900/50 text-stone-300">
-                    <span>🍾 DEB95 Ethanol Base (67%):</span>
-                    <span class="font-extrabold text-white text-base sm:text-lg">${deb95Ml.toFixed(2)} ml</span>
+
+                <!-- PHASE B CARRIER BLOCK -->
+                <div class="p-3 bg-stone-900/60 rounded-xl border border-blue-900/50 space-y-2">
+                    <div class="text-xs font-bold text-blue-300 flex justify-between items-center">
+                        <span>🍾 Phase B: Carrier Base (68% ของสูตร)</span>
+                        <span class="font-mono text-blue-200">${carrierVolTotal.toFixed(2)} ml</span>
+                    </div>
+                    <div class="space-y-1.5 pl-2 text-xs border-l-2 border-blue-500">
+                        <div class="flex justify-between items-center text-stone-200">
+                            <span>🍾 DEB95 Ethanol (68% ใน Carrier):</span>
+                            <span class="font-bold text-white">${deb95Ml.toFixed(2)} ml</span>
+                        </div>
+                        <div class="flex justify-between items-center text-stone-200">
+                            <span>💧 DPG - Dipropylene Glycol (30% ใน Carrier):</span>
+                            <span class="font-bold text-purple-300">${dpgMl.toFixed(2)} ml</span>
+                        </div>
+                        <div class="flex justify-between items-center text-stone-200">
+                            <span>✨ IPM - Isopropyl Myristate (5% ใน Carrier):</span>
+                            <span class="font-bold text-orange-300">${ipmMl.toFixed(2)} ml</span>
+                        </div>
+                    </div>
                 </div>
             `;
 
-            document.getElementById('calcRatioNotice').innerText = `⏱️ *สูตรความเข้มข้น High Concentration 30% System: ติดทนบนผิว ${day.skinH} ชม. / บนผ้า ${day.fabricH} ชม.`;
+            document.getElementById('calcRatioNotice').innerText = `⏱️ *ผสม Phase A (32%) + Carrier Phase B (68%) ให้ได้รวม ${vol} ml พอดี ติดทนนานสูงสุด 24–36+ ชม.`;
         }
 
         // COMPENDIUM DIRECTORY LOGIC
